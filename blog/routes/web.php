@@ -1,5 +1,6 @@
 <?php
 
+use App\City;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/city', function () {
+    $cities = App\City::All();
+    return view('cities', compact('cities'));
 });
