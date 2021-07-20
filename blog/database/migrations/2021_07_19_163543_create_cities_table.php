@@ -20,6 +20,7 @@ class CreateCitiesTable extends Migration
             $table->string('description');
             $table->string('vote');
             $table->string('phone');
+            $table->float('price');
             $table->string('email');
             $table->timestamps();
         });

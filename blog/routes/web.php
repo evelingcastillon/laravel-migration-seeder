@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/city', function () {
-    $cities = App\City::All();
-    return view('cities', compact('cities'));
+Route::get('/cities', function () {
+    $cities = App\City::all();
+    return view('cities.index', compact('cities'));
 });
